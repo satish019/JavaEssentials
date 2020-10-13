@@ -1,11 +1,117 @@
-package com.letsupgrade.java;
+package com.Day_3;
+
+import java.util.Scanner;
 
 public class Main {
 
     public static void main(String[] args) {
-        SalaryAndTax e1 = new SalaryAndTax();
+        //Question 1
+        //Take 5 subjects marks each subject 100 marks;
+        //calculate the percentage;
+        //based on the percentage print the grade and the percentage;
 
-        e1.getDetails();
-        e1.display();
+        Scanner sc=new Scanner(System.in);
+
+        float phy;
+        float chem;
+        float maths;
+        float comp;
+        float eng;
+        float percent;
+
+        System.out.println("Enter marks of Physics (out of 100)");
+        phy=sc.nextFloat();
+        System.out.println("Enter marks of Chemistry (out of 100)");
+        chem=sc.nextFloat();
+        System.out.println("Enter marks of Maths (out of 100)");
+        maths=sc.nextFloat();
+        System.out.println("Enter marks of Computer (out of 100)");
+        comp=sc.nextFloat();
+        System.out.println("Enter marks of English (out of 100)");
+        eng=sc.nextFloat();
+
+        percent=(phy+chem+maths+comp+eng)/5;
+        System.out.println("Your Percentage is "+percent);
+
+        if(percent>=75){
+            System.out.println("Your Grade is A");
+        }
+        else if(percent>=50 && percent<75){
+            System.out.println("Your Grade is B");
+        }
+        else if(percent>=33 && percent<50){
+            System.out.println("Your Grade is C");
+        }
+        else {
+            System.out.println("Failed!!");
+        }
+
+        System.out.println("---------------------------------");
+
+        //Question 2
+        //Take employee name, date of birth, month of birth, birth year, monthly salary;
+        //5L - 20%
+        //4L - 15%
+        //3L - 10%
+        //2L - 5%
+        //Display name, date of birth,month of birth, birth year, salary and the tax amount
+
+        String Name;
+        int dob;
+        String mob;
+        int by;
+        double sal;
+        double tsal=0.0;
+        double tax;
+
+        sc.nextLine();
+        System.out.println("Enter Name of Employee");
+        Name=sc.nextLine();
+        System.out.println("Enter Date of Birth");
+        dob=sc.nextInt();
+        sc.nextLine();
+        System.out.println("Enter Month of Birth");
+        mob=sc.nextLine();
+        System.out.println("Enter Birth Year");
+        by=sc.nextInt();
+        System.out.println("Enter Annual Salary ");
+        sal=sc.nextDouble();
+
+        if(sal>=500000){
+            tax=(sal*0.2);
+            tsal=sal-tax;
+        }
+        else if(sal>=400000 && sal<500000){
+            tax=(sal*0.15);
+            tsal=sal-tax;
+        }
+        else if(sal>=300000 && sal<400000){
+            tax=(sal*0.10);
+            tsal=sal-tax;
+        }
+        else if(sal>=200000 && sal<300000){
+            tax=(sal*0.05);
+            tsal=sal-tax;
+        }
+        else {
+            tax=0;
+        }
+
+        System.out.println("Name is "+Name);
+        System.out.println("Date of Birth is "+dob);
+        System.out.println("Month of Birth is "+mob);
+        System.out.println("Birth Year is "+by);
+        System.out.println("Salary is "+tsal);
+        if(tax==0){
+            System.out.println("No Need to pay tax");
+        }
+        else{
+            System.out.println("Tax is "+tax);
+        }
+
+
+
+
+
     }
 }
