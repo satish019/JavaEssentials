@@ -1,7 +1,7 @@
 //Question 1:create a class avenger with
-properties (name,age,power,weapon,planet) and with
-functions-getDetails() and displayDetails().
-create 5 objects as an array in the main method and call.
+//properties (name,age,power,weapon,planet) and with
+//functions-getDetails() and displayDetails().
+//create 5 objects as an array in the main method and call.
 
 public class Odd {
     public static void main(String[] args) {    
