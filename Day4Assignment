@@ -1,3 +1,8 @@
+//Question 1:create a class avenger with
+properties (name,age,power,weapon,planet) and with
+functions-getDetails() and displayDetails().
+create 5 objects as an array in the main method and call.
+
 public class Odd {
     public static void main(String[] args) {    
         int [] arr = new int [] {1, 2, 3, 4, 5};    
@@ -7,6 +12,8 @@ public class Odd {
         }
     }
 }
+
+//Question 2:Create an int array with 5 values and print only odd values
 
 import java.util.*;
 public class Add {
@@ -26,6 +33,8 @@ public class Add {
         sc.close();
      }
 }
+
+//Question 3:Create an int array of size 5, take all the values from a user,add all the values and print the sum
 
 import java.util.*;
 public class Avenger{
